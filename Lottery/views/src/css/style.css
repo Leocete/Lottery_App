@@ -1,0 +1,169 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: radial-gradient(ellipse at bottom right, #aef78e, #77BA99,#aef78e);
+    background-size: 400% 400%;
+    top: 0px;
+    left: 0px;
+    animation: ambient 25s ease-in-out infinite;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@keyframes ambient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+.lottery-page {
+    width: 80%;
+    border: 3px solid black;
+    border-style : inset;
+    margin-top: 50px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main-header {
+    padding: 0px, 50px, 50px, 50px;
+}
+
+.lottery-number,  .lottery-number_label, .draw-number{
+    width: 100px;
+    height: 50px;
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 100px, 0px;
+    padding: 100px, 0px;
+    align-items: center;
+}
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.action-header {
+    margin-bottom: 70px;
+}
+
+label, input {
+    display: block;
+    text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="number"] {
+    font: 15px/24px 'Muli', sans-serif; 
+    font-weight: bold;
+    color: #333; 
+    width: 150px; 
+    box-sizing: border-box; 
+    letter-spacing: 1px;
+    margin: 30px;
+}
+
+.number-wrapper {
+    position: relative;
+}
+
+/* Input animation */
+.lottery-number {
+    border: 3px solid #ccc; 
+    padding: 7px 14px 9px; 
+    transition: 0.4s;
+}
+.lottery-number ~ .focus-border:before,
+.lottery-number ~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.3s;}
+.lottery-number ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
+.lottery-number ~ .focus-border i:before,
+.lottery-number ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 0; background-color: #4caf50; transition: 0.4s;}
+.lottery-number ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0;}
+.lottery-number:focus ~ .focus-border:before,
+.lottery-number:focus ~ .focus-border:after{width: 100%; transition: 0.4s;}
+.lottery-number:focus ~ .focus-border i:before,
+.lottery-number:focus ~ .focus-border i:after{height: 100%; transition: 0.5s;}
+
+.draw-number {
+    border: 1px solid #ccc; 
+    padding: 7px 14px 9px; 
+    transition: 0.4s;
+}
+.draw-number ~ .focus-border:before,
+.draw-number~ .focus-border:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #4caf50; transition: 0.3s;}
+.draw-number ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
+.draw-number ~ .focus-border i:before,
+.draw-number ~ .focus-border i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #4caf50; transition: 0.4s;}
+.draw-number ~ .focus-border i:after{left: auto; right: 0; top: auto; bottom: 0;}
+.draw-number:focus ~ .focus-border:before,
+.draw-number:focus ~ .focus-border:after{width: 100%; transition: 0.3s;}
+.draw-number:focus ~ .focus-border i:before,
+.draw-number:focus ~ .focus-border i:after{height: 100%; transition: 0.4s;}
+
+/* Button styles */
+#button-send_results {
+    border: 1px solid #23723c;
+    color: #fdfdfd !important;
+    letter-spacing: 3px;
+    background: rgb(11, 56, 33);
+    font-weight: 700;
+    margin-top: 30px;
+    padding: 20px;
+    text-transform: uppercase;
+    border-radius: 6px;
+    display: inline-block;
+    width: 200px;
+}
+
+#button-send_results:hover {
+    cursor: pointer;
+    background: rgb(47, 110, 78);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.3s ease 0s;
+}
+
+.user-results {
+    margin-top: 80px;
+    padding: 30px 100px;
+    text-align: center;
+}
+
+.blackBorder {
+    border: 3px dotted black;
+}
+
+.results-table {
+    padding: 30px;
+}
+
+.error {
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    color: red;
+    margin-bottom: 20px;
+}

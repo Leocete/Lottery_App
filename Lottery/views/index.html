@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lottery app</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+
+    <main class="container">
+        <section class="lottery-page">
+            <h1 class="main-header">WELCOME TO THE LOTTERY!</h1>
+            <h2 class="action-header">Please, enter your winnings numbers (from 1 to 52) here:</h2>
+
+            <form class="user-input">
+                <div class="input-wrapper">
+                <div class="number-wrapper">
+                    <label for="user_number_1">1st number</label>
+                    <input id="user_number_1" class="lottery-number" name="user_number_1" type="number" maxlength="2" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+            
+                <div class="number-wrapper">
+                    <label for="user_number_2">2nd number</label>
+                    <input id="user_number_2" class="lottery-number" name="user_number_2" type="number" maxlength="2" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="number-wrapper">
+                    <label for="user_number_3">3rd number</label>
+                    <input id="user_number_3" class="lottery-number" name="user_number_3" type="number" maxlength="2" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="number-wrapper">
+                    <label for="user_number_4">4th number</label>
+                    <input id="user_number_4" class="lottery-number" name="user_number_4" type="number" maxlength="2" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="number-wrapper">
+                    <label for="user_number_5">5th number</label>
+                    <input id="user_number_5" class="lottery-number" name="user_number_5" type="number" maxlength="2" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="number-wrapper">
+                    <label for="user_number_6">6th number</label>
+                    <input id="user_number_6" class="lottery-number" name="user_number_6" type="number" maxlength="2"required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="number-wrapper">
+                    <label for="user-draw">Number of draws</label>
+                    <input id="user-draw" class="draw-number" name="draw_number" type="number" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                </div>
+                <div class="submit-button">
+                    <button id="button-send_results" class="submit" type="submit">Let's win!</button>
+                </div>
+            </form>
+            <div class="user-results">
+
+            </div>
+        </section>
+    </main>
+    
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="src/js/validation.js"></script>
+</body>
+</html>

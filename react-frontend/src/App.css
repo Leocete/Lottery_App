@@ -1,0 +1,19 @@
+body {
+  font-family: 'Ubuntu', sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: radial-gradient(ellipse at bottom right, #aef78e, #77BA99,#aef78e);
+  background-size: 400% 400%;
+  top: 0px;
+  left: 0px;
+  animation: ambient 25s ease-in-out infinite;
+}
+
+@keyframes ambient {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
